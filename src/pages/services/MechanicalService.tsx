@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Wrench, CheckCircle, Shield, Clock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import MechanicalServiceForm from '@/components/forms/MechanicalServiceForm';
 
 export default function MechanicalService() {
   return (
@@ -19,9 +19,7 @@ export default function MechanicalService() {
               <p className="text-xl text-gray-300 mb-10 leading-relaxed">
                 Precision diagnostics and expert repairs for luxury and performance vehicles. From routine maintenance to complex engine work.
               </p>
-              <Link to="/form/mechanical" className="gold-button px-10 py-4 text-base">
-                Book Service Appointment
-              </Link>
+              <a href="#book" className="gold-button px-10 py-4 text-base">Book Service Appointment</a>
             </div>
           </div>
         </section>
@@ -50,13 +48,9 @@ export default function MechanicalService() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 text-center bg-white">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-luxury-black mb-6">Ready to Experience the AVNTS Difference?</h2>
-            <p className="text-gray-500 mb-10 max-w-xl mx-auto">Schedule your service appointment online today or call us for a custom consultation.</p>
-            <Link to="/form/mechanical" className="gold-button px-12 py-4">
-              Book Now
-            </Link>
-        </section>
+        <section id="book">
+        <MechanicalServiceForm />
+      </section>
       </div>
     </Layout>
   );
